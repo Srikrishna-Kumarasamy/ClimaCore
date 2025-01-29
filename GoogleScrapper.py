@@ -1,10 +1,11 @@
+import os
 import requests
 from TextSummrizer import summarize_text
 
 class PermitTimeFrameFetcher:
     # Class-level variables for Google API (adjust with your actual credentials)
-    MY_API_KEY = "AIzaSyCqRlP1kqDSj6A3-NLhcRnrrLE_KmP8nKo"
-    MY_CSE_ID = "63cb67bae11e44d04"
+    MY_API_KEY = os.getenv("GoogleAPIkey")
+    MY_CSE_ID = os.getenv("CSEid")
 
     def __init__(self, loc, re_type, query_option=1):
 
